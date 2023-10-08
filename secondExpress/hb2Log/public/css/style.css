@@ -1,0 +1,129 @@
+/* This is a CSS comment */
+
+/* Styling for the body element */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Styling for the header element */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styling for the navigation menu */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Styling for links on hover */
+nav a:hover {
+  text-decoration: underline;
+  color: #ff5733; /* Change the color on hover */
+}
+/* Style the aside section */
+aside {
+  background-color: #eee;
+  padding: 10px;
+}
+
+/* Style the main article */
+article {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+}
+#main > nav,
+#main > aside {
+  flex: 0 0 20vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+
+/* Style the panel */
+.panel {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style links inside the footer */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Change the hover effect for links in the footer */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Style the copyright notice inside the footer */
+footer p {
+  margin: 0;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
