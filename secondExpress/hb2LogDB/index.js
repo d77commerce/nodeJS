@@ -6,10 +6,29 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { printURL } from "./constants.js";
 import routs from "./router.js";
+import sequelize from './config.js';
+import User from './models/user.js';
+
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 //static files
 const staticFiles = express.static("public");
+
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+
+    // Synchronize the models with the database (creates tables if they don't exist)
+    await sequelize.sync();
+    // Query all users
+    const users = await User.findAll();
+    console.log('All users:', users.map((user) => user.toJSON()));
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+})();
+
 
 const app = express();
 const port = 3000;
